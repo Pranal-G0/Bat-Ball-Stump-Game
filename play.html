@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="play.css">
+</head>
+<body>
+    <h1 class="heading">Bat Ball Stump Game</h1>
+
+    <h2>Choose Your Move</h2>
+    <h4 id="moves-left">Moves-left</h4>
+    <button class="choice-btn"  onclick=" 
+    let computerChoice=generateComputerChoice();
+    let resultMsg=getResult('Bat',computerChoice);
+    showResult('Bat',computerChoice,resultMsg);
+    leftMoves();
+    "><img src="finalbat.jpg" alt="Bat" class="choice-img"></button>
+
+    <button class="choice-btn" onclick="
+     computerChoice=generateComputerChoice();
+     resultMsg=getResult('Ball',computerChoice);
+     showResult('Ball',computerChoice,resultMsg);
+     leftMoves();
+     "><img src="finalball.jpg" alt="Ball" class="choice-img"></button>
+
+    <button class="choice-btn" onclick="
+     computerChoice=generateComputerChoice();
+     resultMsg=getResult('Stump',computerChoice);
+     showResult('Stump',computerChoice,resultMsg);
+     leftMoves();
+    "><img src="finalstump.jpg" alt="Stump" class="choice-img"></button>
+    
+    
+
+      <h3 id="userInfo"></h3>
+      <h3 id="computerInfo"></h3>
+      <br>
+      <h3 id="resultInfo"></h3>
+      <br>
+      <h4 id="scoreInfo"></h4>
+ 
+    
+      <button onclick="
+      localStorage.clear();
+      resetScore();
+      showResult();
+      leftMoves();
+      ">Reset</button>
+
+
+ <script src="app.js">  </script>
+ <script src="play.js">  </script>
+ <script src="result.js">  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESULT</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+
+   <br><br>
+      <h2>Score</h2>
+      <h3 id="your-gradeR"></h3>
+      <h3 id="comp-gradeR"></h3>
+
+    <br> 
+    <span id="over">!!! Game Over !!!</span>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <div id="finalResult"></div>
+
+    <br>
+    <br>
+    <br>
+    <button onclick="
+    location.href=`index.html`;
+        localStorage.clear();
+        resetScore();
+        showResult();
+    ">PLAY AGAIN</button>
+
+
+    <button onclick="
+    location.href=`index.html`;
+        localStorage.clear();
+        resetScore();
+        showResult();
+    
+    
+    ">EXIT</button>
+
+
+    <script src="app.js"></script>
+    <script src="play.js"></script>
+    <script src="result.js"></script>
+</body>
+</html>
