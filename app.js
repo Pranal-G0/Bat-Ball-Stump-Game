@@ -2,6 +2,7 @@ let score;
 let scoreStr=localStorage.getItem('Score');
 
 function resetScore(scoreStr){
+   
     if(scoreStr!==undefined){
     score=JSON.parse(scoreStr);
     }
@@ -76,21 +77,54 @@ if(userMove==='Bat'){
 }
 
 }
+
+function showUserMove(userMove){
+    if(userMove==='Bat'){
+        document.querySelector('#userInfo').innerHTML= `Your Choice <br/><img src="images/finalbat.jpg" alt="Bat" class="choice-img">` ;
+    }
+    else if(userMove==='Ball'){
+        document.querySelector('#userInfo').innerHTML=`Your Choice<br/><img src="images/finalball.jpg" alt="Ball" class="choice-img">`;
+    }
+    else if(userMove==='Stump'){
+        document.querySelector('#userInfo').innerHTML=`Your Choice<br/><img src="images/finalstump.jpg" alt="Stump" class="choice-img">`;
+    }
+    else{
+        document.querySelector('#userInfo').innerHTML= ` `;
+    }
+}
+function showComputerMove(computerMove){
+    if(computerMove==='Bat'){
+        document.querySelector('#computerInfo').innerHTML= `Computer Choice <br/><img src="images/finalbat.jpg" alt="Bat" class="choice-img">`;
+    }
+    else if(computerMove==='Ball'){
+        document.querySelector('#computerInfo').innerHTML=`Computer Choice<br/><img src="images/finalball.jpg" alt="Ball" class="choice-img">`;
+    }
+    else if(computerMove==='Stump'){
+        document.querySelector('#computerInfo').innerHTML=`Computer Choice <br/><img src="images/finalstump.jpg" alt="Stump" class="choice-img">`;
+    }
+    else{
+        document.querySelector('#computerInfo').innerHTML= ` `;
+    }
+}
+
+
+
 function showResult(userMove,computerMove,resultMsg){
-localStorage.setItem('Score',JSON.stringify(score));
-document.querySelector('#userInfo').innerText=userMove ? `You have chosen ${userMove}` : ``;
-document.querySelector('#computerInfo').innerText=computerMove ? `Computer Choice is ${computerMove} ` : ``;
-document.querySelector('#resultInfo').innerText=resultMsg ? resultMsg : ``;
-document.querySelector('#scoreInfo').innerText=`( Your ${score.displayScore()}  )`  || ``;
+    localStorage.setItem('Score',JSON.stringify(score));
+  
 
+    document.querySelector('#resultInfo').innerText=resultMsg ? resultMsg : ``;
+    document.querySelector('#scoreInfo').innerText=`( Your ${score.displayScore()}  )`  || ``;
 
-if (score.win+score.lost+score.tie >=5){
-   
-    location.href="result.html";
+    setTimeout(redirect,5000);
     
- }
 
-
+}
+function redirect(){
+    if (score.win+score.lost+score.tie >=5){
+       
+        location.href="result.html";
+    }
 }
 
 

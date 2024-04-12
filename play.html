@@ -13,37 +13,58 @@
     <button class="choice-btn"  onclick=" 
     let computerChoice=generateComputerChoice();
     let resultMsg=getResult('Bat',computerChoice);
+     showUserMove('Bat');
+    showComputerMove(computerChoice);
     showResult('Bat',computerChoice,resultMsg);
+   
     leftMoves();
-    "><img src="finalbat.jpg" alt="Bat" class="choice-img"></button>
+    ">
+    <!-- <img src="finalbat.jpg" alt="Bat" class="choice-img"> -->
+    Bat
+    </button>
 
     <button class="choice-btn" onclick="
      computerChoice=generateComputerChoice();
      resultMsg=getResult('Ball',computerChoice);
+
+     showUserMove('Ball');
+     showComputerMove(computerChoice);
      showResult('Ball',computerChoice,resultMsg);
+   
      leftMoves();
-     "><img src="finalball.jpg" alt="Ball" class="choice-img"></button>
+     ">
+     <!-- <img src="finalball.jpg" alt="Ball" class="choice-img"> -->
+    Ball
+    </button>
 
     <button class="choice-btn" onclick="
      computerChoice=generateComputerChoice();
      resultMsg=getResult('Stump',computerChoice);
+     showUserMove('Stump');
+    showComputerMove(computerChoice);
      showResult('Stump',computerChoice,resultMsg);
+      
      leftMoves();
-    "><img src="finalstump.jpg" alt="Stump" class="choice-img"></button>
+    ">
+    <!-- <img src="finalstump.jpg" alt="Stump" class="choice-img"> -->
+    Stump</button>
+    <br>
     
-    
+     
 
-      <h3 id="userInfo"></h3>
-      <h3 id="computerInfo"></h3>
-      <br>
-      <h3 id="resultInfo"></h3>
-      <br>
-      <h4 id="scoreInfo"></h4>
- 
+        <h3 id="userInfo"></h3><span>----------</span>
+        <h3 id="computerInfo"></h3>
+        <br>
+        <h3 id="resultInfo"></h3>
+        <br>
+        <h4 id="scoreInfo"></h4>
     
-      <button onclick="
+    
+      <button class="reset-btn" onclick="
       localStorage.clear();
       resetScore();
+       showUserMove();
+     showComputerMove();
       showResult();
       leftMoves();
       ">Reset</button>

@@ -1,6 +1,33 @@
 body{
-    background-image: url("homebackground.jpg");
-    /* background-repeat: repeat; */
+    background-image: url("images/homebackground.jpg");
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
     background-size: 100% 100%;
+}
+button:hover{
+    transition: 0.5s ;
+}
+@media (max-width:500px) {
+    body {
+        background-image: url("images/indexbgmobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        background-attachment: fixed;
+        background-size: 100% 100%;
+
+    }
+}
+
+@media (min-width:501px)and (max-width:1300px) {
+    body {
+        background-image: url("images/indexbgtab.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+        background-attachment: fixed;
+        background-size: 100% 100%;
+
+    }
 }
