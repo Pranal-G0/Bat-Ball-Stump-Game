@@ -1,5 +1,5 @@
 body{
-    background-image: url("images/resultbglaptop.webp");
+    background-image: url("resultbglaptop.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -92,7 +92,7 @@ button:hover{
   /* result page css start */
    @media (max-width:500px) {
     body {
-        background-image: url("images/resultbgmobile.jpg");
+        background-image: url("resultbgmobile.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         
@@ -103,7 +103,7 @@ button:hover{
    }
      @media (min-width:501px  )and (max-width:1300px) {
        body {
-         background-image: url("images/resultbgtab.jpg");
+         background-image: url("resultbgtab.jpg");
          background-size: cover;
          background-repeat: no-repeat;
    
