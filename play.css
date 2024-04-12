@@ -1,5 +1,5 @@
 body{
-    background-image: url("images/playbglaptop.jpg");
+    background-image: url("playbglaptop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -53,7 +53,7 @@ button:hover {
 
 @media (max-width:500px) {
     body {
-        background-image: url("images/indexbgmobile.jpg");
+        background-image: url("indexbgmobile.jpg");
            background-size: cover;
            background-repeat: no-repeat;
 
@@ -65,7 +65,7 @@ button:hover {
 
 @media (min-width:501px)and (max-width:1300px) {
     body {
-        background-image: url("images/playbglaptop.jpg");
+        background-image: url("playbglaptop.jpg");
         background-size: cover;
         background-repeat: no-repeat;
 
