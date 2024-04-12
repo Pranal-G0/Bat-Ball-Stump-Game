@@ -1,5 +1,5 @@
 body{
-    background-image: url("images/homebackground.jpg");
+    background-image: url("homebackground.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -10,7 +10,7 @@ button:hover{
 }
 @media (max-width:500px) {
     body {
-        background-image: url("images/indexbgmobile.jpg");
+        background-image: url("indexbgmobile.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         
@@ -22,7 +22,7 @@ button:hover{
 
 @media (min-width:501px)and (max-width:1300px) {
     body {
-        background-image: url("images/indexbgtab.jpg");
+        background-image: url("indexbgtab.jpg");
         background-size: cover;
         background-repeat: no-repeat;
        
